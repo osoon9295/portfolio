@@ -3,7 +3,7 @@ import React from "react";
 const Intro = () => {
   return (
     <section
-      aria-label="소개"
+      aria-label="intro"
       className="w-full h-screen flex flex-col md:flex-row justify-center items-center text-center px-4 gap-6"
     >
       <h1 className="text-2xl md:text-4xl font-semibold">
