@@ -2,12 +2,42 @@
 
 import React, { useState } from "react";
 
+const SKILL_CATEGORIES = [
+  { id: "all", name: "All" },
+  { id: "language", name: "Language" },
+  { id: "framework/library", name: "Framework/Library" },
+  { id: "styling", name: "Styling" },
+  { id: "api/database", name: "API/Database" },
+  { id: "etc", name: "ETC" },
+];
+
+const SKILLS = [
+  { name: "JavaScript", category: "language" },
+  { name: "HTML5", category: "language" },
+  { name: "CSS3", category: "language" },
+  { name: "TypeScript", category: "language" },
+  { name: "React", category: "framework/library" },
+  { name: "Next.js", category: "framework/library" },
+  { name: "Redux", category: "framework/library" },
+  { name: "Zustand", category: "framework/library" },
+  { name: "TanStack Query", category: "framework/library" },
+  { name: "Tailwind CSS", category: "styling" },
+  { name: "Styled-component", category: "styling" },
+  { name: "Radix UI", category: "styling" },
+  { name: "Axios", category: "api/database" },
+  { name: "Fetch", category: "api/database" },
+  { name: "GitHub", category: "etc" },
+  { name: "Vercel", category: "etc" },
+  { name: "ESLint", category: "etc" },
+  { name: "Prettier", category: "etc" },
+  { name: "Jira", category: "etc" },
+  { name: "Slack", category: "etc" },
+  { name: "Notion", category: "etc" },
+  { name: "Figma", category: "etc" },
+];
+
 const Skills = () => {
   const [type, setType] = useState("all");
-
-  const changeType = (type: string) => {
-    setType(type);
-  };
 
   return (
     <section
@@ -16,188 +46,29 @@ const Skills = () => {
     >
       <h2>Skills</h2>
       <div className="flex flex-row gap-6 ">
-        <button
-          onClick={() => changeType("language")}
-          className="hover:bg-red-300"
-        >
-          Language
-        </button>
-        <button onClick={() => changeType("framework/library")}>
-          Framework/Library
-        </button>
-        <button onClick={() => changeType("styling")}> Styling</button>
-        <button onClick={() => changeType("api/database")}>API/Database</button>
-        <button onClick={() => changeType("etc")}>ETC</button>
+        {SKILL_CATEGORIES.map((category) => (
+          <button
+            key={category.id}
+            onClick={() => setType(category.id)}
+            className="hover:bg-red-300"
+          >
+            {category.name}
+          </button>
+        ))}
       </div>
       <div className="w-2/3 grid grid-cols-5 gap-4 items-center">
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          JavaScript
-        </div>
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          HTML5
-        </div>
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          CSS3
-        </div>
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          TypeScript
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          React
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          Next.js
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          Redux
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          Zustand
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          TanStack Query
-        </div>
-        <div
-          className={`${
-            type === "styling" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Tailwind CSS
-        </div>
-        <div
-          className={`${
-            type === "styling" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Styled-component
-        </div>
-        <div
-          className={`${
-            type === "styling" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Radix UI
-        </div>
-        <div
-          className={`${
-            type === "api/database" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Axios
-        </div>
-        <div
-          className={`${
-            type === "api/database" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Fetch
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          GitHub
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Vercel
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          ESLint
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Prettier
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Jira
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Slack
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Notion
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Figma
-        </div>
+        {SKILLS.map((skill) => (
+          <div
+            key={skill.name}
+            className={`${
+              type === "all" || type === skill.category
+                ? "bg-black"
+                : "bg-gray-300"
+            } text-white w-fit rounded px-2 whitespace-nowrap`}
+          >
+            {skill.name}
+          </div>
+        ))}
       </div>
     </section>
   );
