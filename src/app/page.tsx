@@ -1,16 +1,15 @@
-import AboutText from "@/components/about/AboutText";
-import Keyword from "@/components/about/Keyword";
-import Skills from "@/components/about/Skills";
+import AboutArea from "@/components/about/AboutArea";
+import ContactArea from "@/components/contact/ContactArea";
 import Intro from "@/components/Intro";
-import React from "react";
+import WorkArea from "@/components/work/WorkArea";
 
 const page = () => {
   return (
     <div>
       <Intro />
-      <Keyword />
-      <AboutText />
-      <Skills />
+      <AboutArea />
+      <WorkArea />
+      <ContactArea />
     </div>
   );
 };
