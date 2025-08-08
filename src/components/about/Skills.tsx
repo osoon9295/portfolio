@@ -26,7 +26,9 @@ const Skills = () => {
           Framework/Library
         </button>
         <button onClick={() => changeType("styling")}> Styling</button>
-        <button onClick={() => changeType("api/database")}>API/Database</button>
+        <button onClick={() => changeType("api/database")}>
+          VCS 및 협업도구
+        </button>
         <button onClick={() => changeType("etc")}>ETC</button>
       </div>
       <div className="w-2/3 grid grid-cols-5 gap-4 items-center">
