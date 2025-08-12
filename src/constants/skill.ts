@@ -1,0 +1,31 @@
+export const SKILLS_CATEGORIES = [
+  { id: "all", text: "All" },
+  { id: "language", text: "Language" },
+  { id: "framework", text: "Framework/Library" },
+  { id: "styling", text: "Styling" },
+  { id: "tools", text: "Tools" },
+  { id: "deployment", text: "Deployment" },
+  { id: "design", text: "Design" },
+];
+
+export const SKILLS = [
+  { name: "HTML5", category: "language", description: "" },
+  { name: "CSS3", category: "language", description: "" },
+  { name: "JavaScript", category: "language", description: "" },
+  { name: "TypeScript", category: "language", description: "" },
+  { name: "React", category: "framework", description: "" },
+  { name: "Next.js", category: "framework", description: "" },
+  { name: "Redux", category: "framework", description: "" },
+  { name: "Zustand", category: "framework", description: "" },
+  { name: "TanStack Query", category: "framework", description: "" },
+  { name: "Tailwind CSS", category: "styling", description: "" },
+  { name: "Styled-components", category: "styling", description: "" },
+  { name: "GitHub", category: "tools", description: "" },
+  { name: "ESLint", category: "tools", description: "" },
+  { name: "Prettier", category: "tools", description: "" },
+  { name: "Jira", category: "tools", description: "" },
+  { name: "Slack", category: "tools", description: "" },
+  { name: "Notion", category: "tools", description: "" },
+  { name: "Vercel", category: "deployment", description: "" },
+  { name: "Figma", category: "design", description: "" },
+];
