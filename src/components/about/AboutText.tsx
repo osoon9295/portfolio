@@ -3,7 +3,7 @@ import React from "react";
 const AboutText = () => {
   return (
     <section
-      className="h-[50vh] flex flex-col justify-start items-center text-center px-4"
+      className="flex flex-col justify-start items-center text-center px-4"
       aria-label="about-text"
     >
       <p className="text-base md:text-lg font-bold mb-4">
