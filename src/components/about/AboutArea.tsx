@@ -7,7 +7,7 @@ import ProfileImage from "./ProfileImage";
 const AboutArea = () => {
   return (
     <section aria-label="about" className="w-fill">
-      <div className="w-full h-screen flex flex-col items-center justify-center bg-red-50 gap-4">
+      <div className="w-full h-screen flex flex-col items-center justify-center gap-4">
         <ProfileImage />
         <Keyword />
         <AboutText />
