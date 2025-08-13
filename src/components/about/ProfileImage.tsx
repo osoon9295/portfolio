@@ -9,13 +9,7 @@ const ProfileImage = () => {
   console.log(isInfoOpen);
 
   return (
-    <div
-      className={`${
-        isInfoOpen
-          ? "w-4/5 flex items-center justify-center gap-4"
-          : "w-[200px]"
-      }`}
-    >
+    <div className="flex flex-row gap-4">
       <div className="group relative w-[200px] h-[230px] rounded-4xl overflow-hidden">
         <Image
           src="/profile.png"
@@ -34,7 +28,7 @@ const ProfileImage = () => {
         </div>
       </div>
       {isInfoOpen && (
-        <div className="">
+        <div className=" h-full flex flex-col justify-center text-sm font-light leading-relaxed">
           <div>2011.02 계원예술고등학교 조소과 졸업</div>
           <div>2018.02 서울시립대학교 환경조각학과 졸업</div>
           <div>2024.08 내일배움캠프 React 5기 수료</div>
