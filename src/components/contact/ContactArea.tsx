@@ -1,4 +1,3 @@
-import React from "react";
 import ContactText from "./ContactText";
 import Links from "./Links";
 

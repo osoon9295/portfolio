@@ -1,9 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import { SKILLS, SKILLS_CATEGORIES } from "@/constants/skills";
+import { useState } from "react";
+import { MdBuild } from "react-icons/md";
 
 const Skills = () => {
   const [type, setType] = useState("all");
+
+  const isActive = (cat: string) => type === cat || type === "all";
 
   const changeType = (type: string) => {
     setType(type);
@@ -12,194 +16,44 @@ const Skills = () => {
   return (
     <section
       aria-label="skills"
-      className="w-full h-screen flex flex-col justify-center items-center"
+      className="w-full h-screen flex flex-col justify-center items-center gap-4"
     >
-      <h2>Skills</h2>
+      <h2 className="text-2xl font-semibold">Skills</h2>
       <div className="flex flex-row gap-6 ">
-        <button
-          onClick={() => changeType("language")}
-          className="hover:bg-red-300"
-        >
-          Language
-        </button>
-        <button onClick={() => changeType("framework/library")}>
-          Framework/Library
-        </button>
-        <button onClick={() => changeType("styling")}> Styling</button>
-        <button onClick={() => changeType("api/database")}>
-          VCS 및 협업도구
-        </button>
-        <button onClick={() => changeType("etc")}>ETC</button>
+        {SKILLS_CATEGORIES.map((category) => {
+          return (
+            <button
+              key={category.id}
+              onClick={() => changeType(category.id)}
+              className="hover:bg-lime-200"
+              type="button"
+            >
+              {category.text}
+            </button>
+          );
+        })}
       </div>
-      <div className="w-2/3 grid grid-cols-5 gap-4 items-center">
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          JavaScript
-        </div>
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          HTML5
-        </div>
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          CSS3
-        </div>
-        <div
-          className={`${
-            type === "language" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          TypeScript
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          React
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          Next.js
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          Redux
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          Zustand
-        </div>
-        <div
-          className={`${
-            type === "framework/library" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2`}
-        >
-          TanStack Query
-        </div>
-        <div
-          className={`${
-            type === "styling" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Tailwind CSS
-        </div>
-        <div
-          className={`${
-            type === "styling" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Styled-component
-        </div>
-        <div
-          className={`${
-            type === "styling" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Radix UI
-        </div>
-        <div
-          className={`${
-            type === "api/database" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Axios
-        </div>
-        <div
-          className={`${
-            type === "api/database" || type === "all"
-              ? "bg-black"
-              : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Fetch
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          GitHub
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Vercel
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          ESLint
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Prettier
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Jira
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Slack
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Notion
-        </div>
-        <div
-          className={`${
-            type === "etc" || type === "all" ? "bg-black" : "bg-gray-300"
-          } text-white w-fit rounded px-2 whitespace-nowrap`}
-        >
-          Figma
-        </div>
+      <div className="w-3/5 grid grid-cols-3 gap-4 items-center">
+        {SKILLS.map((skill) => {
+          const Icon = skill.icon;
+          const active = isActive(skill.category);
+          console.log(Icon);
+          return (
+            <div
+              key={skill.name}
+              className={`${
+                active ? "bg-lime-200 text-black" : "bg-zinc-100 text-zinc-500"
+              } flex items-center gap-2 py-1 rounded px-2 text-sm`}
+            >
+              {Icon ? (
+                <Icon size={18} aria-hidden />
+              ) : (
+                <MdBuild size={18} aria-hidden />
+              )}
+              <span>{skill.name}</span>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

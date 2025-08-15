@@ -1,14 +1,14 @@
 import AboutArea from "@/components/about/AboutArea";
 import ContactArea from "@/components/contact/ContactArea";
 import Intro from "@/components/Intro";
-import WorkArea from "@/components/work/WorkArea";
+import ProjectArea from "@/components/project/ProjectArea";
 
 const page = () => {
   return (
     <div>
       <Intro />
       <AboutArea />
-      <WorkArea />
+      <ProjectArea />
       <ContactArea />
     </div>
   );
