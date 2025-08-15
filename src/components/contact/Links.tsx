@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { FaPhone } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { SiGithub, SiVelog } from "react-icons/si";
