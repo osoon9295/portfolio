@@ -1,10 +1,13 @@
 "use client";
 
 import { SKILLS, SKILLS_CATEGORIES } from "@/constants/skills";
-import React, { useState } from "react";
+import { useState } from "react";
+import { MdBuild } from "react-icons/md";
 
 const Skills = () => {
   const [type, setType] = useState("all");
+
+  const isActive = (cat: string) => type === cat || type === "all";
 
   const changeType = (type: string) => {
     setType(type);
@@ -30,18 +33,24 @@ const Skills = () => {
           );
         })}
       </div>
-      <div className="w-3/5 grid grid-cols-5 gap-4 items-center">
+      <div className="w-3/5 grid grid-cols-3 gap-4 items-center">
         {SKILLS.map((skill) => {
+          const Icon = skill.icon;
+          const active = isActive(skill.category);
+          console.log(Icon);
           return (
             <div
               key={skill.name}
               className={`${
-                type === skill.category || type === "all"
-                  ? "bg-black"
-                  : "bg-gray-300"
-              } text-white w-fit rounded px-2`}
+                active ? "bg-lime-200 text-black" : "bg-zinc-100 text-zinc-500"
+              } flex items-center gap-2 py-1 rounded px-2 text-sm`}
             >
-              {skill.name}
+              {Icon ? (
+                <Icon size={18} aria-hidden />
+              ) : (
+                <MdBuild size={18} aria-hidden />
+              )}
+              <span>{skill.name}</span>
             </div>
           );
         })}

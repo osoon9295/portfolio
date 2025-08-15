@@ -1,4 +1,3 @@
-import React from "react";
 import Keyword from "./Keyword";
 import AboutText from "./AboutText";
 import Skills from "./Skills";

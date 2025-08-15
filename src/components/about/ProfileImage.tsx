@@ -6,8 +6,6 @@ import { useState } from "react";
 const ProfileImage = () => {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
-  console.log(isInfoOpen);
-
   return (
     <div className="flex flex-row gap-4">
       <div className="group relative w-[200px] h-[230px] rounded-4xl overflow-hidden">
