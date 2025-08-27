@@ -1,9 +1,11 @@
 import {
   SiNextdotjs,
+  SiReacthookform,
   SiRedux,
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
+  SiZod,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
@@ -34,6 +36,8 @@ export const PROJECTS = [
       { name: "TanStack Query", category: "framework" },
       { name: "Tailwind CSS", category: "styling", icon: SiTailwindcss },
       { name: "sonner", category: "tools" },
+      { name: "zod", category: "tools", icon: SiZod },
+      { name: "react-hook-form", category: "tools", icon: SiReacthookform },
     ],
     github: "https://github.com/PlaceholderProject",
     webLink: "https://www.place-holder.site",

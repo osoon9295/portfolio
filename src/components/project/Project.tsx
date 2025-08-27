@@ -7,9 +7,9 @@ import { MdBuild } from "react-icons/md";
 
 const Project = ({ project }: { project: ProjectProps }) => {
   return (
-    <figure className="flex flex-col gap-4 border-1 w-[300px] h-[400px] p-4 rounded-3xl hover:border-lime-600 hover:text-lime-700">
+    <figure className="flex flex-col gap-4 border-1 w-[300px] h-[460px] p-4 rounded-3xl hover:border-lime-600 hover:text-lime-600">
       <div className="flex flex-row justify-between">
-        <h3>{project.name}</h3>
+        <h3 className="font-[800]">{project.name}</h3>
         <Link href={project.github}>
           <FaGithub size={25} />
         </Link>
@@ -36,7 +36,7 @@ const Project = ({ project }: { project: ProjectProps }) => {
             return (
               <li
                 key={skill.name}
-                className="bg-lime-200 text-black flex items-center gap-2 p-1 rounded text-[12px]"
+                className="bg-lime-200 text-black flex items-center gap-2 px-1 py-[2px] rounded text-sm font-[200]"
               >
                 {Icon ? (
                   <Icon size={18} aria-hidden />
