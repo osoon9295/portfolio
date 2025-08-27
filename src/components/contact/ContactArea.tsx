@@ -5,7 +5,7 @@ const ContactArea = () => {
   return (
     <section
       aria-label="contact"
-      className="w-full h-screen flex flex-col items-center justify-center"
+      className="w-full h-screen flex flex-col items-center justify-center gap-6"
     >
       <ContactText />
       <Links />
