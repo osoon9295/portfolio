@@ -9,7 +9,7 @@ const Project = ({ project }: { project: ProjectProps }) => {
   return (
     <figure className="flex flex-col gap-4 border-1 w-[300px] h-[460px] p-4 rounded-3xl hover:border-lime-600 hover:text-lime-600">
       <div className="flex flex-row justify-between">
-        <h3 className="font-[800]">{project.name}</h3>
+        <h3 className="font-[800] text-xl">{project.name}</h3>
         <Link href={project.github}>
           <FaGithub size={25} />
         </Link>
