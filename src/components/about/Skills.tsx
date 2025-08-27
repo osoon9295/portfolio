@@ -18,14 +18,14 @@ const Skills = () => {
       aria-label="skills"
       className="w-full h-screen flex flex-col justify-center items-center gap-4"
     >
-      <h2 className="text-2xl font-semibold">Skills</h2>
+      <h2 className="text-3xl font-[700]">Skills</h2>
       <div className="flex flex-row gap-6 ">
         {SKILLS_CATEGORIES.map((category) => {
           return (
             <button
               key={category.id}
               onClick={() => changeType(category.id)}
-              className="hover:bg-lime-200"
+              className="hover:bg-lime-200 text-lg font-[500]"
               type="button"
             >
               {category.text}
@@ -43,7 +43,7 @@ const Skills = () => {
               key={skill.name}
               className={`${
                 active ? "bg-lime-200 text-black" : "bg-zinc-100 text-zinc-500"
-              } flex items-center gap-2 py-1 rounded px-2 text-sm`}
+              } flex items-center gap-2 py-1 rounded px-2 text-sm font-[200]`}
             >
               {Icon ? (
                 <Icon size={18} aria-hidden />
