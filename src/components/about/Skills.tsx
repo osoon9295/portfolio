@@ -46,13 +46,9 @@ const Skills = () => {
                   active
                     ? "bg-lime-200 text-black"
                     : "bg-zinc-100 text-zinc-500"
-                } flex items-center gap-2 py-1 rounded px-2 text-sm font-[200]`}
+                } flex items-center gap-2 py-1 rounded px-2 text-xl md:text-sm lg:text-base font-[200]`}
               >
-                {Icon ? (
-                  <Icon size={18} aria-hidden />
-                ) : (
-                  <MdBuild size={18} aria-hidden />
-                )}
+                {Icon ? <Icon aria-hidden /> : <MdBuild aria-hidden />}
                 <span className="hidden md:block">{skill.name}</span>
               </div>
             );
