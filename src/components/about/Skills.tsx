@@ -18,7 +18,7 @@ const Skills = () => {
       aria-label="skills"
       className="w-full h-screen flex flex-col justify-center items-center gap-6"
     >
-      <h2 className="text-lg md:text-xl lg:text-3xl font-[700]">Skills</h2>
+      <h2 className="text-lg md:text-2xl lg:text-3xl font-[700]">Skills</h2>
       <div className="flex flex-row md:flex-col gap-4">
         <div className="flex flex-col md:flex-row gap-6 ">
           {SKILLS_CATEGORIES.map((category) => {
@@ -26,7 +26,7 @@ const Skills = () => {
               <button
                 key={category.id}
                 onClick={() => changeType(category.id)}
-                className="hover:bg-lime-200 text-sm md:text-md lg:text-base text-lg font-[500]"
+                className="hover:bg-lime-200 md:text-md lg:text-base text-sm font-[500]"
                 type="button"
               >
                 {category.text}
