@@ -1,7 +1,6 @@
 import React from "react";
 import { GiJupiter } from "react-icons/gi";
 import { IoPlanetOutline, IoPlanetSharp } from "react-icons/io5";
-import { PiAsteriskBold } from "react-icons/pi";
 import { RiSpaceShipFill } from "react-icons/ri";
 
 const Navigation = () => {
@@ -18,21 +17,6 @@ const Navigation = () => {
       </div>
       <div className="fixed left-[60%] top-[30%] text-4xl">
         <RiSpaceShipFill />
-      </div>
-      <div className="absolute left-[10%] top-[60%] text-4xl">
-        <PiAsteriskBold />
-      </div>
-      <div className="absolute left-[85%] top-[20%] text-4xl">
-        <PiAsteriskBold />
-      </div>
-      <div className="absolute left-[40%] top-[15%] text-4xl">
-        <PiAsteriskBold />
-      </div>
-      <div className="absolute left-[35%] top-[80%] text-4xl">
-        <PiAsteriskBold />
-      </div>
-      <div className="absolute left-[70%] top-[85%] text-4xl">
-        <PiAsteriskBold />
       </div>
     </div>
   );
