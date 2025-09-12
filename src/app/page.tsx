@@ -7,7 +7,7 @@ import ProjectArea from "@/components/project/ProjectArea";
 
 const page = () => {
   return (
-    <div className="relative">
+    <div className="relative snap-y snap-mandatory h-screen overflow-y-scroll">
       <Intro />
       <AboutArea />
       <ProjectArea />
