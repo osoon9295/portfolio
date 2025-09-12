@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <section
       aria-label="intro"
-      className="relative w-full h-screen flex flex-col md:flex-row justify-center items-center text-center px-4 gap-6"
+      className="relative w-full h-screen flex flex-col md:flex-row justify-center items-center text-center px-4 gap-6 snap-center"
     >
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
         프론트엔드 개발자 <br />
