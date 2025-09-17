@@ -1,11 +1,16 @@
 import React from "react";
 import { PiAsteriskBold } from "react-icons/pi";
 
-const Intro = () => {
+interface IntroProps {
+  id?: string;
+}
+
+const Intro = ({ id }: IntroProps) => {
   return (
     <section
+      id={id}
       aria-label="intro"
-      className="relative w-full h-screen flex flex-col md:flex-row justify-center items-center text-center px-4 gap-6 snap-center"
+      className="relative w-full h-screen flex flex-col md:flex-row justify-center items-center text-center px-4 gap-6 snap-start"
     >
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
         프론트엔드 개발자 <br />
@@ -17,6 +22,7 @@ const Intro = () => {
         제가 마음껏 부딪히고, 만들고, 고치며 <br />
         성장할 수 있는 팀을 찾고 있습니다.
       </p>
+
       <div className="absolute left-[10%] top-[60%] text-4xl">
         <PiAsteriskBold />
       </div>
