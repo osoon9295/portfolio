@@ -1,17 +1,21 @@
 import Keyword from "./Keyword";
 import AboutText from "./AboutText";
-import Skills from "./Skills";
 import ProfileImage from "./ProfileImage";
 
-const AboutArea = () => {
+interface AboutAreaProps {
+  id?: string;
+}
+
+const AboutArea = ({ id }: AboutAreaProps) => {
   return (
-    <section aria-label="about" className="w-fill">
-      <div className="w-full h-screen flex flex-col items-center justify-center gap-4 snap-center">
-        <ProfileImage />
-        <Keyword />
-        <AboutText />
-      </div>
-      <Skills />
+    <section
+      id={id}
+      aria-label="about"
+      className="w-full h-screen flex flex-col items-center justify-center gap-4 snap-start"
+    >
+      <ProfileImage />
+      <Keyword />
+      <AboutText />
     </section>
   );
 };

@@ -4,7 +4,11 @@ import { SKILLS, SKILLS_CATEGORIES } from "@/constants/skills";
 import { useState } from "react";
 import { MdBuild } from "react-icons/md";
 
-const Skills = () => {
+interface SkillsProps {
+  id?: string;
+}
+
+const Skills = ({ id }: SkillsProps) => {
   const [type, setType] = useState("all");
 
   const isActive = (cat: string) => type === cat || type === "all";
@@ -15,8 +19,9 @@ const Skills = () => {
 
   return (
     <section
+      id={id}
       aria-label="skills"
-      className="w-full h-screen flex flex-col justify-center items-center gap-6 snap-center"
+      className="w-full h-screen flex flex-col justify-center items-center gap-6 snap-start"
     >
       <h2 className="text-lg md:text-2xl lg:text-3xl font-[700]">Skills</h2>
       <div className="flex flex-row md:flex-col gap-4">
