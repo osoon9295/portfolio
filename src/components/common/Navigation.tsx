@@ -21,7 +21,7 @@ const NAV_ITEMS = [
     id: "project",
     Icon: GiJupiter,
     label: "Project section",
-    coords: { left: "80%", top: "50%" },
+    coords: { left: "85%", top: "50%" },
   },
   {
     id: "contact",
@@ -32,7 +32,7 @@ const NAV_ITEMS = [
 ];
 
 const STACK_LEFT = "1.5rem"; // matches Tailwind left-6
-const STACK_SPACING = 72; // px spacing between icons when stacked
+const STACK_SPACING = 60; // px spacing between icons when stacked
 
 const Navigation = () => {
   const [stacked, setStacked] = useState(false);
