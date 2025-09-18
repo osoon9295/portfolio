@@ -9,27 +9,30 @@ const NAV_ITEMS = [
     id: "about",
     Icon: IoPlanetOutline,
     label: "About section",
-    positionClass: "fixed left-[25%] top-[25%]",
+    coords: { left: "25%", top: "25%" },
   },
   {
     id: "skill",
     Icon: IoPlanetSharp,
     label: "Skill section",
-    positionClass: "fixed left-[50%] top-[70%]",
+    coords: { left: "50%", top: "70%" },
   },
   {
     id: "project",
     Icon: GiJupiter,
     label: "Project section",
-    positionClass: "fixed left-[80%] top-[50%]",
+    coords: { left: "80%", top: "50%" },
   },
   {
     id: "contact",
     Icon: RiSpaceShipFill,
     label: "Contact section",
-    positionClass: "fixed left-[60%] top-[30%]",
+    coords: { left: "60%", top: "30%" },
   },
 ];
+
+const STACK_LEFT = "1.5rem"; // matches Tailwind left-6
+const STACK_SPACING = 72; // px spacing between icons when stacked
 
 const Navigation = () => {
   const [stacked, setStacked] = useState(false);
@@ -62,24 +65,27 @@ const Navigation = () => {
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <nav
-      className={
-        stacked
-          ? "fixed left-6 top-1/2 -translate-y-1/2 flex flex-col gap-6"
-          : "pointer-events-none"
-      }
-    >
-      {NAV_ITEMS.map(({ id, Icon, label, positionClass }) => (
+    <nav className="fixed inset-0 pointer-events-none">
+      {NAV_ITEMS.map(({ id, Icon, label, coords }, index) => (
         <button
           type="button"
           key={id}
           onClick={() => go(id)}
           aria-label={label}
-          className={`cursor-pointer text-4xl transition-colors hover:text-lime-500 ${
+          className="pointer-events-auto absolute -translate-y-1/2 text-2xl lg:text-3xl transition-all duration-500 ease-in-out hover:text-lime-700"
+          style={
             stacked
-              ? "pointer-events-auto"
-              : `${positionClass} pointer-events-auto`
-          }`}
+              ? {
+                  left: STACK_LEFT,
+                  top: `calc(50% + ${
+                    (index - (NAV_ITEMS.length - 1) / 2) * STACK_SPACING
+                  }px)`,
+                }
+              : {
+                  left: coords.left,
+                  top: coords.top,
+                }
+          }
         >
           <Icon />
         </button>
