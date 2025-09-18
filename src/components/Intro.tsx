@@ -23,19 +23,19 @@ const Intro = ({ id }: IntroProps) => {
         성장할 수 있는 팀을 찾고 있습니다.
       </p>
 
-      <div className="absolute left-[20%] top-[60%] text-lg text-zinc-500">
+      <div className="absolute left-[10%] md:left-[20%] top-[60%] text-lg text-zinc-500">
         <PiAsteriskBold />
       </div>
       <div className="absolute left-[70%] top-[25%] text-l text-zinc-200">
         <PiAsteriskBold />
       </div>
-      <div className="absolute left-[40%] top-[20%] text-xl text-zinc-400">
+      <div className="absolute left-[40%] top-[12%] md:top-[20%] text-xl text-zinc-400">
         <PiAsteriskBold />
       </div>
       <div className="absolute left-[38%] top-[75%] text-lg text-zinc-300">
         <PiAsteriskBold />
       </div>
-      <div className="absolute left-[66%] top-[65%] text-sm text-zinc-700">
+      <div className="absolute left-[70%] md:left-[66%] top-[70%] md:top-[65%] text-sm text-zinc-700">
         <PiAsteriskBold />
       </div>
     </section>
