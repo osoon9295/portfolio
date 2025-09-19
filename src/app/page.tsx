@@ -1,6 +1,6 @@
 import AboutArea from "@/components/about/AboutArea";
 import Skills from "@/components/about/Skills";
-import Card from "@/components/common/Card";
+import FloatingActionButton from "@/components/common/FAB";
 import Navigation from "@/components/common/Navigation";
 import ContactArea from "@/components/contact/ContactArea";
 import Intro from "@/components/Intro";
@@ -14,7 +14,7 @@ const page = () => {
       <Skills id="skill" />
       <ProjectArea id="project" />
       <ContactArea id="contact" />
-      <Card />
+      <FloatingActionButton />
       <Navigation />
     </div>
   );
