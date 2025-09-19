@@ -4,7 +4,7 @@ import React from "react";
 // import { IoIosMail } from "react-icons/io";
 // import { SiGithub, SiVelog } from "react-icons/si";
 
-const Card = () => {
+const FloatingActionButton = () => {
   return (
     <div className="fixed bottom-6 right-6 w-[4rem] h-[4rem] md:w-[7rem] md:h-[7rem] shadow-xl rounded-full overflow-hidden ">
       <Image
@@ -32,4 +32,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default FloatingActionButton;
