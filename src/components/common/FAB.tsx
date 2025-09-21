@@ -1,33 +1,40 @@
+"use client";
+
 import Image from "next/image";
 // import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { IoIosMail } from "react-icons/io";
 // import { IoIosMail } from "react-icons/io";
 // import { SiGithub, SiVelog } from "react-icons/si";
 
 const FloatingActionButton = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  console.log("isActive", isActive);
+
   return (
-    <div className="fixed bottom-6 right-6 w-[4rem] h-[4rem] md:w-[7rem] md:h-[7rem] shadow-xl rounded-full overflow-hidden ">
-      <Image
-        // width={500}
-        // height={500}
-        alt="아바타이미지"
-        src="/avatar.jpeg"
-        fill
-      />
-      {/* <div className="flex flex-row gap-4 text-3xl items-center text-lime-800">
-        <Link href="https://github.com/osoon9295">
-          <SiGithub />
-        </Link>
-        <Link href="https://velog.io/@genuss040822">
-          <SiVelog />
-        </Link>
-        <a
-          href="mailto:osoon9295@gmail.com?subject=포트폴리오 문의&body=안녕하세요!"
-          className="contact-button text-4xl"
-        >
+    <div className="group fixed bottom-6 right-6 bg-red-100 ">
+      {isActive && (
+        <div className="absolute flex items-center justify-center text-black text-lg z-20 bg-amber-100">
           <IoIosMail />
-        </a>
-      </div> */}
+        </div>
+      )}
+      <div className="w-[3.5rem] h-[3.5rem] md:w-[7rem] md:h-[7rem] shadow-xl rounded-full overflow-hidden bg-[#AFBC90] relative">
+        <Image
+          alt="아바타이미지"
+          src="/avatar.jpeg"
+          className="object-cover w-full h-full transition duration-300 group-hover:opacity-50"
+          fill
+        />
+        <div
+          onClick={() => {
+            setIsActive(!isActive);
+          }}
+          className="absolute inset-0 flex items-center justify-center bg-opacity-40 text-white text-lg opacity-0 transition duration-300 group-hover:opacity-100"
+        >
+          연락하기
+        </div>
+      </div>
     </div>
   );
 };
