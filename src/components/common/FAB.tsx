@@ -13,9 +13,9 @@ const FloatingActionButton = () => {
   console.log("isActive", isActive);
 
   return (
-    <div className="group fixed bottom-6 right-6 bg-red-100 ">
+    <div className="group fixed bottom-6 right-6">
       {isActive && (
-        <div className="absolute flex items-center justify-center text-black text-lg z-20 bg-amber-100">
+        <div className="absolute -top-10 w-full flex justify-center text-black text-[2rem] z-20 bg-amber-100">
           <IoIosMail />
         </div>
       )}
