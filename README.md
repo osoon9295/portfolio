@@ -20,12 +20,12 @@
 
 - 프로필 이미지 위에 "더 알아보기" 오버레이를 클릭하면 학력·교육·인턴 정보가 펼쳐집니다.  
   [src/components/about/ProfileImage.tsx L6-L36](src/components/about/ProfileImage.tsx#L6-L36)
-- 키워드와 자기소개 문단을 통해 가치관과 협업 스타일을 소개합니다. [src/components/about/Keyword.tsx L1-L14](src/components/about/Keyword.tsx#L1-L14)  
-  [src/components/about/AboutText.tsx L1-L25](src/components/about/AboutText.tsx#L1-L25)
+- 키워드와 자기소개 문단을 통해 가치관과 협업 스타일을 소개합니다. <br> [src/components/about/Keyword.tsx L1-L14](src/components/about/Keyword.tsx#L1-L14)  
+   [src/components/about/AboutText.tsx L1-L25](src/components/about/AboutText.tsx#L1-L25)
 
 ### Skills
 
-- 카테고리 버튼을 통해 기술 스택을 필터링하며 확인할 수 있습니다. [src/components/about/Skills.tsx L1-L55](src/components/about/Skills.tsx#L1-L55)
+- 카테고리 버튼을 통해 기술 스택을 필터링하며 확인할 수 있습니다. <br> [src/components/about/Skills.tsx L1-L55](src/components/about/Skills.tsx#L1-L55)
 - 기술 목록은 `constants/skills.ts`에서 관리하여 확장과 유지보수가 용이합니다.  
   [src/constants/skills.ts L1-L45](src/constants/skills.ts#L1-L45)
 
