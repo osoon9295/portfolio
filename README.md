@@ -13,13 +13,15 @@
 ### Intro
 
 - 스크롤 스냅이 적용된 첫 화면에서 간단한 인사와 핵심 메시지를 전달합니다.  
-  [src/app/page.tsx L12-L19](src/app/page.tsx#L12-L19) [src/components/Intro.tsx L10-L37](src/components/Intro.tsx#L10-L37)
+  [src/app/page.tsx L12-L19](src/app/page.tsx#L12-L19)  
+  [src/components/Intro.tsx L10-L37](src/components/Intro.tsx#L10-L37)
 
 ### About
 
 - 프로필 이미지 위에 "더 알아보기" 오버레이를 클릭하면 학력·교육·인턴 정보가 펼쳐집니다.  
   [src/components/about/ProfileImage.tsx L6-L36](src/components/about/ProfileImage.tsx#L6-L36)
-- 키워드와 자기소개 문단을 통해 가치관과 협업 스타일을 소개합니다. [src/components/about/Keyword.tsx L1-L14](src/components/about/Keyword.tsx#L1-L14) [src/components/about/AboutText.tsx L1-L25](src/components/about/AboutText.tsx#L1-L25)
+- 키워드와 자기소개 문단을 통해 가치관과 협업 스타일을 소개합니다. [src/components/about/Keyword.tsx L1-L14](src/components/about/Keyword.tsx#L1-L14)  
+  [src/components/about/AboutText.tsx L1-L25](src/components/about/AboutText.tsx#L1-L25)
 
 ### Skills
 
