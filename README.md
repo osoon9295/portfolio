@@ -1,4 +1,4 @@
-# Bo-Po – 프론트엔드 개발자 이보영 포트폴리오
+# Bo-Po : 프론트엔드 개발자 이보영 포트폴리오
 
 [배포 사이트 보러 가기](https://bo-po.site/)
 
@@ -12,31 +12,34 @@
 
 ### Intro
 
-- 스크롤 스냅이 적용된 첫 화면에서 간단한 인사와 핵심 메시지를 전달합니다.
+- 스크롤 스냅이 적용된 첫 화면에서 간단한 인사와 핵심 메시지를 전달합니다.  
   [src/app/page.tsx L12-L19](src/app/page.tsx#L12-L19) [src/components/Intro.tsx L10-L37](src/components/Intro.tsx#L10-L37)
 
 ### About
 
-- 프로필 이미지 위에 "더 알아보기" 오버레이를 클릭하면 학력·교육·인턴 정보가 펼쳐집니다.
+- 프로필 이미지 위에 "더 알아보기" 오버레이를 클릭하면 학력·교육·인턴 정보가 펼쳐집니다.  
   [src/components/about/ProfileImage.tsx L6-L36](src/components/about/ProfileImage.tsx#L6-L36)
 - 키워드와 자기소개 문단을 통해 가치관과 협업 스타일을 소개합니다. [src/components/about/Keyword.tsx L1-L14](src/components/about/Keyword.tsx#L1-L14) [src/components/about/AboutText.tsx L1-L25](src/components/about/AboutText.tsx#L1-L25)
 
 ### Skills
 
 - 카테고리 버튼을 통해 기술 스택을 필터링하며 확인할 수 있습니다. [src/components/about/Skills.tsx L1-L55](src/components/about/Skills.tsx#L1-L55)
-- 기술 목록은 `constants/skills.ts`에서 관리하여 확장과 유지보수가 용이합니다. [src/constants/skills.ts L1-L45](src/constants/skills.ts#L1-L45)
+- 기술 목록은 `constants/skills.ts`에서 관리하여 확장과 유지보수가 용이합니다.  
+  [src/constants/skills.ts L1-L45](src/constants/skills.ts#L1-L45)
 
 ### Projects
 
-- 썸네일, 기간, 역할, 활용 기술을 한눈에 보여주는 카드 뷰로 주요 프로젝트를 소개합니다. [src/components/project/ProjectArea.tsx L1-L21](src/components/project/ProjectArea.tsx#L1-L21) [src/components/project/Project.tsx L1-L46](src/components/project/Project.tsx#L1-L46)
-- 프로젝트 데이터는 `constants/projects.ts`로 분리되어 있어 쉽게 추가/수정할 수 있습니다.
+- 썸네일, 기간, 역할, 활용 기술을 한눈에 보여주는 카드 뷰로 주요 프로젝트를 소개합니다.  
+  [src/components/project/ProjectArea.tsx L1-L21](src/components/project/ProjectArea.tsx#L1-L21)  
+  [src/components/project/Project.tsx L1-L46](src/components/project/Project.tsx#L1-L46)
+- 프로젝트 데이터는 `constants/projects.ts`로 분리되어 있어 쉽게 추가/수정할 수 있습니다.  
   [src/constants/projects.ts L12-L52](src/constants/projects.ts#L12-L52)
 
 ### Contact
 
-- Github, Velog, 이메일로 바로 연결되는 링크를 제공합니다.
+- Github, Velog, 이메일로 바로 연결되는 링크를 제공합니다.  
   [src/components/contact/Links.tsx L1-L20](src/components/contact/Links.tsx#L1-L20)
-- "연락하기" 플로팅 버튼과 섹션 네비게이션으로 어느 위치에서도 빠르게 이동할 수 있습니다.
+- "연락하기" 플로팅 버튼과 섹션 네비게이션으로 어느 위치에서도 빠르게 이동할 수 있습니다.  
   [src/components/common/FAB.tsx L1-L39](src/components/common/FAB.tsx#L1-L39)  
   [src/components/common/Navigation.tsx L1-L76](src/components/common/Navigation.tsx#L1-L76)
 
@@ -52,7 +55,7 @@
 | Deployment & Infra    | Vercel, Supabase                              |
 | Design                | Figma                                         |
 
-※ 프로젝트에서 사용하지 않은 아이콘은 기본 대체 아이콘으로 표현됩니다.
+※ 프로젝트에서 사용하지 않은 아이콘은 기본 대체 아이콘으로 표현됩니다.  
 [src/components/project/Project.tsx L28-L44](src/components/project/Project.tsx#L28-L44)
 
 ## 프로젝트 구조
